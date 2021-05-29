@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1:Sanity" parallel="classes" thread-count="1">
+    <listeners>
+        <listener class-name="com.qa.reporting.ExtentListenerTest"></listener>
+    </listeners>
+    <test name="Sanity Test Suite: Application Name">
+        <groups>
+            <define name="All">
+                <include name="api"/>
+                <include name="ui"/>
+            </define>
+            <run>
+                <!--                <include name="All"/>-->
+                <include name="All"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testCases.ui.LoginPageTest"/>
+            <class name="testCases.ui.CheckoutPageTest"/>
+            <class name="testCases.api.CreateUserTest"/>
+        </classes>
+    </test>
+</suite>
