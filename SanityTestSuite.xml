@@ -13,13 +13,14 @@
             </define>
             <run>
                 <!--                <include name="All"/>-->
-                <include name="All"/>
+                <include name="extentreport"/>
             </run>
         </groups>
         <classes>
             <class name="testCases.ui.LoginPageTest"/>
             <class name="testCases.ui.CheckoutPageTest"/>
             <class name="testCases.api.CreateUserTest"/>
+            <class name="testCases.util.ReportingTest"/>
         </classes>
     </test>
 </suite>
