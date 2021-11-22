@@ -74,6 +74,7 @@ public class ExtentListenerTest extends BaseTest implements ITestListener {
         log.info("===========================================================");
         log.info("Test Case Execution Got Failed,Test Name is:\t" + result.getName());
         log.info("===========================================================");
+//        extentTest.get().addScreenCaptureFromBase64String(ExtentReportManager.takeScreenshotAsBase64(driver));
 
     }
 

@@ -50,22 +50,22 @@ public class HelperLog extends BaseTest {
     }
 
     public void info(String message) {
-        log.info(message);
+//        log.info(message);
         extentTest.get().info(message);
     }
 
     public void warn(String message) {
-        log.warn(message);
+//        log.warn(message);
         extentTest.get().warning(message);
     }
 
     public void fail(String message) {
-        log.error(message);
+//        log.error(message);
         extentTest.get().fail(message);
     }
 
     public void pass(String message) {
-        log.info(message);
+//        log.info(message);
         extentTest.get().pass(message);
     }
 

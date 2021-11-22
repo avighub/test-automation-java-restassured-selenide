@@ -1,5 +1,10 @@
 package com.qa.helper;
 
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Field;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.qa.baseConfig.BaseTest;
@@ -259,4 +264,74 @@ public class HelperReadFile extends BaseTest {
         }
     }
 
+    public List<String> getExcelFieldNames(String filePath, String sheetName) throws FilloException {
+        Fillo fillo = new Fillo();
+        Connection connection = fillo.getConnection(filePath);
+        String strQuery = "Select * from " + sheetName;
+        Recordset recordset = connection.executeQuery(strQuery);
+
+        ArrayList<String> fieldNames = new ArrayList<>();
+        fieldNames = recordset.getFieldNames();
+
+        recordset.close();
+        connection.close();
+
+        return fieldNames;
+    }
+
+    public List<String> getExcelDataByColumnName(String filePath, String sheetName, String columnName) throws FilloException {
+        Fillo fillo = new Fillo();
+        Connection connection = fillo.getConnection(filePath);
+        String strQuery = "Select * from " + sheetName;
+        Recordset recordset = connection.executeQuery(strQuery);
+
+        ArrayList<String> columnData = new ArrayList<>();
+        while (recordset.next()) {
+            String cellValue = recordset.getField(columnName);
+            columnData.add(cellValue);
+        }
+        recordset.close();
+        connection.close();
+
+        return columnData;
+    }
+
+    public Field getExcelDataByColumnIndex(String filePath, String sheetName, int columnIndex) throws FilloException {
+        Fillo fillo = new Fillo();
+        Connection connection = fillo.getConnection(filePath);
+        String strQuery = "Select * from " + sheetName;
+        Recordset recordset = connection.executeQuery(strQuery);
+
+//        ArrayList<String> columnData = new ArrayList<>();
+//        while (recordset.next()) {
+//            String cellValue = recordset.getField(columnIndex);
+//            columnData.add(cellValue);
+//        }
+        Map<String, Object> fieldMap1 = new HashMap();
+        Field field = new Field(fieldMap1);
+        field = recordset.getField(columnIndex);
+        System.out.println(field.toString());
+
+        recordset.close();
+        connection.close();
+
+        return field;
+    }
+
+    public List<String> getExcelDataByRow(String filePath, String sheetName, String columnName) throws FilloException {
+        Fillo fillo = new Fillo();
+        Connection connection = fillo.getConnection(filePath);
+        String strQuery = "Select * from " + sheetName;
+        Recordset recordset = connection.executeQuery(strQuery);
+
+        ArrayList<String> columnData = new ArrayList<>();
+        while (recordset.next()) {
+            String cellValue = recordset.getField(columnName);
+            columnData.add(cellValue);
+        }
+        recordset.close();
+        connection.close();
+
+        return columnData;
+    }
 }

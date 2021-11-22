@@ -6,6 +6,9 @@ import com.aventstack.extentreports.reporter.KlovReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.qa.baseConfig.BaseTest;
 import com.qa.baseConfig.EnvManager;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.nio.file.Files;
@@ -155,4 +158,8 @@ public class ExtentReportManager extends BaseTest {
         }
     }
 
+    public static String takeScreenshotAsBase64(WebDriver driver) {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        return ts.getScreenshotAs(OutputType.BASE64);
+    }
 }

@@ -12,14 +12,16 @@
                 <include name="ui"/>
             </define>
             <run>
-                <!--                <include name="All"/>-->
-                <include name="extentreport"/>
+                <include name="All"/>
+<!--                <include name="ui"/>-->
+<!--                <include name="api"/>-->
             </run>
         </groups>
         <classes>
             <class name="testCases.ui.LoginPageTest"/>
             <class name="testCases.ui.CheckoutPageTest"/>
             <class name="testCases.api.CreateUserTest"/>
+            <class name="testCases.api.ListUsersTest"/>
             <class name="testCases.util.ReportingTest"/>
         </classes>
     </test>

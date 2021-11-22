@@ -10,3 +10,7 @@
     - CI/CD: Jenkins pipeline
     - Build and dependency lib: Maven 
     - Logging Lib: Log4J
+  
+- Credits
+    - Learnt a lot from Naveen Automation labs channel (Naveen)
+    - Great stuffs from Coding best practices and Java8 - Testing Mini Bytes ( Amuthan)
