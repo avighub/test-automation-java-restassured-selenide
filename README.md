@@ -1,4 +1,4 @@
-### Java-UI-API Test Automation Framework
+### WEB and API Test Automation Framework Using Java
 - Techstack
     - Core Language: Java
     - UI automation Lib: Selenium , webdrivermanager
