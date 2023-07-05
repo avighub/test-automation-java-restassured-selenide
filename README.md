@@ -11,6 +11,6 @@
     - Build and dependency lib: Maven 
     - Logging Lib: Log4J
   
-- Credits
-    - Learnt a lot from Naveen Automation labs channel (Naveen)
-    - Great stuffs from Coding best practices and Java8 - Testing Mini Bytes ( Amuthan)
+- Thanks to amazing contents and tutorials
+    - Testing Mini Bytes [Youtube channel](https://www.youtube.com/@TestingMiniBytes) ( Amuthan Saktivel)
+    - Power Tester [Youtube channel](https://www.youtube.com/@powertester5596) ( Pramod Yadav )
