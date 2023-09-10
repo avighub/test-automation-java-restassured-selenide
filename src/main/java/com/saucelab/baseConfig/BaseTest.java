@@ -1,8 +1,8 @@
-package com.qa.baseConfig;
+package com.saucelab.baseConfig;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.qa.helper.HelperLog;
+import com.saucelab.helper.HelperLog;
 import io.restassured.response.Response;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -89,7 +89,7 @@ public class BaseTest {
     /**
      * After every Test response will be saved in Extent report
      */
-    @AfterMethod(alwaysRun = true)
+//    @AfterMethod(alwaysRun = true)
     public void appendResponseToReport() {
         log.info("**** AfterMethod: TestBase ****");
         try {

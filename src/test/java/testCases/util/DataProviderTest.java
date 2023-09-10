@@ -1,6 +1,6 @@
 package testCases.util;
 
-import com.qa.helper.HelperReadFile;
+import com.saucelab.helper.HelperReadFile;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

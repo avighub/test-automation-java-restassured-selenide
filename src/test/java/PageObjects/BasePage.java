@@ -1,9 +1,9 @@
 package PageObjects;
 
-import com.qa.baseConfig.BaseTest;
-import com.qa.baseConfig.EnvManager;
-import com.qa.webdriver.UtilSelenium;
-import com.qa.webdriver.WebDriverFactory;
+import com.saucelab.baseConfig.BaseTest;
+import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.webdriver.UtilSelenium;
+import com.saucelab.webdriver.WebDriverFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;

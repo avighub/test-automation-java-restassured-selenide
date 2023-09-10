@@ -1,6 +1,6 @@
 package DataProvider;
 
-import com.qa.helper.HelperReadFile;
+import com.saucelab.helper.HelperReadFile;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.annotations.DataProvider;
 

@@ -1,6 +1,6 @@
 package PageObjects;
 
-import com.qa.helper.HelperLog;
+import com.saucelab.helper.HelperLog;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 

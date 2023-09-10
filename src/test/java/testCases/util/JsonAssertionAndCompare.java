@@ -1,6 +1,6 @@
 package testCases.util;
 
-import com.qa.helper.HelperReadFile;
+import com.saucelab.helper.HelperReadFile;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 import org.testng.annotations.Test;

@@ -1,8 +1,8 @@
 package PageObjects;
 
-import com.qa.baseConfig.EnvManager;
-import com.qa.helper.HelperApi;
-import com.qa.helper.HelperLog;
+import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.helper.HelperApi;
+import com.saucelab.helper.HelperLog;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

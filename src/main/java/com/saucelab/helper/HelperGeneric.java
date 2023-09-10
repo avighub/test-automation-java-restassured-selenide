@@ -1,4 +1,4 @@
-package com.qa.helper;
+package com.saucelab.helper;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;

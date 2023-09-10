@@ -3,7 +3,7 @@ package testCases.ui;
 import PageObjects.BasePage;
 import PageObjects.InventoryPage;
 import PageObjects.LoginPage;
-import com.qa.helper.HelperLog;
+import com.saucelab.helper.HelperLog;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

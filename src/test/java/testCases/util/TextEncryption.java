@@ -1,19 +1,7 @@
 package testCases.util;
 
-import com.qa.helper.HelperGeneric;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import com.saucelab.helper.HelperGeneric;
 import org.testng.annotations.Test;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 public class TextEncryption {
     @Test(groups = {"encryption"})

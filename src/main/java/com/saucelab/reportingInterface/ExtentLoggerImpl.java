@@ -1,6 +1,6 @@
-package com.qa.reportingInterface;
+package com.saucelab.reportingInterface;
 
-import com.qa.baseConfig.BaseTest;
+import com.saucelab.baseConfig.BaseTest;
 
 /**
  * This is an implementation class of Loggable Interface

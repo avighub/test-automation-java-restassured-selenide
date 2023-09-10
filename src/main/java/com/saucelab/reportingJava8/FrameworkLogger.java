@@ -1,6 +1,6 @@
-package com.qa.reportingJava8;
+package com.saucelab.reportingJava8;
 
-import com.qa.baseConfig.BaseTest;
+import com.saucelab.baseConfig.BaseTest;
 
 import java.util.EnumMap;
 import java.util.Map;

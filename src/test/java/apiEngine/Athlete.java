@@ -1,5 +1,5 @@
 package apiEngine;
 
-public class Athlete extends com.qa.baseConfig.BaseTest {
+public class Athlete extends com.saucelab.baseConfig.BaseTest {
 
 }

@@ -1,7 +1,7 @@
 package testCases.util;
 
 import com.codoid.products.exception.FilloException;
-import com.qa.helper.HelperReadFile;
+import com.saucelab.helper.HelperReadFile;
 import org.testng.annotations.Test;
 
 public class ReadFileTest {

@@ -1,15 +1,12 @@
 package PageObjects;
 
-import com.qa.baseConfig.EnvManager;
-import com.qa.helper.HelperLog;
-import com.qa.webdriver.UtilSelenium;
-import org.openqa.selenium.By;
+import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.helper.HelperLog;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
 
 
 public class LoginPage extends BasePage {
@@ -34,8 +31,8 @@ public class LoginPage extends BasePage {
     @FindBy(css = "#login-button")
     WebElement loginBtn;
 
-    @FindBy(css = ".bot_column")
-    WebElement sauceBot;
+    @FindBy(xpath = "//div[@class='login_logo']")
+    WebElement swagLabsLogo;
 
     public LoginPage visit() {
         driver.get(baseUrlUI);
@@ -52,7 +49,7 @@ public class LoginPage extends BasePage {
 
     public boolean isLoaded() {
         logger.info("=== Looking for SauceBot Logo ===");
-        return pageWait.until(ExpectedConditions.visibilityOf(sauceBot)).isDisplayed();
+        return pageWait.until(ExpectedConditions.visibilityOf(swagLabsLogo)).isDisplayed();
     }
 
 }

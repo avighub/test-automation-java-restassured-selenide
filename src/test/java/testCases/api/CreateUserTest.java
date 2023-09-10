@@ -1,10 +1,10 @@
 package testCases.api;
 
 import DataProvider.CreateUserDataProvider;
-import com.qa.baseConfig.BaseTest;
-import com.qa.baseConfig.EnvManager;
-import com.qa.helper.HelperApi;
-import com.qa.helper.HelperLog;
+import com.saucelab.baseConfig.BaseTest;
+import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.helper.HelperApi;
+import com.saucelab.helper.HelperLog;
 import io.restassured.RestAssured;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;

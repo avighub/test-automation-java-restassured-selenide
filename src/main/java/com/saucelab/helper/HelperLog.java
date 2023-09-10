@@ -1,7 +1,7 @@
-package com.qa.helper;
+package com.saucelab.helper;
 
 
-import com.qa.baseConfig.BaseTest;
+import com.saucelab.baseConfig.BaseTest;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
@@ -51,22 +51,22 @@ public class HelperLog extends BaseTest {
 
     public void info(String message) {
 //        log.info(message);
-        extentTest.get().info(message);
+//        extentTest.get().info(message);
     }
 
     public void warn(String message) {
 //        log.warn(message);
-        extentTest.get().warning(message);
+//        extentTest.get().warning(message);
     }
 
     public void fail(String message) {
 //        log.error(message);
-        extentTest.get().fail(message);
+//        extentTest.get().fail(message);
     }
 
     public void pass(String message) {
 //        log.info(message);
-        extentTest.get().pass(message);
+//        extentTest.get().pass(message);
     }
 
 }

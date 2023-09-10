@@ -1,10 +1,10 @@
 package testCases.util;
 
-import com.qa.baseConfig.BaseTest;
-import com.qa.reportingInterface.ConsoleLoggerImpl;
-import com.qa.reportingInterface.ExtentLoggerImpl;
-import com.qa.reportingJava8.FrameworkLogger;
-import com.qa.reportingJava8.LogType;
+import com.saucelab.baseConfig.BaseTest;
+import com.saucelab.reportingInterface.ConsoleLoggerImpl;
+import com.saucelab.reportingInterface.ExtentLoggerImpl;
+import com.saucelab.reportingJava8.FrameworkLogger;
+import com.saucelab.reportingJava8.LogType;
 import org.testng.annotations.Test;
 
 public class ReportingTest extends BaseTest {

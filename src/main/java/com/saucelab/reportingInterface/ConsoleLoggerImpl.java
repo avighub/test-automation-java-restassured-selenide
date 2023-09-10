@@ -1,4 +1,4 @@
-package com.qa.reportingInterface;
+package com.saucelab.reportingInterface;
 
 public class ConsoleLoggerImpl implements Loggable {
 
