@@ -3,14 +3,8 @@
 
 ### Eclipse ###
 .metadata
-bin/
 logs/
-test-output/
-out/
-allure-results/
 target/
-TempIgnoreDir/
-tmp/
 *.tmp
 *.bak
 *.swp
@@ -23,7 +17,7 @@ local.properties
 #intelliJ
 .idea/
 *.iml
-ExtentReport/
+
 
 # External tool builders
 .externalToolBuilders/
@@ -37,10 +31,6 @@ ExtentReport/
 ### Eclipse Patch ###
 # Eclipse Core
 .project
-
-### Java ###
-# Compiled class file
-*.class
 
 # Log file
 *.log
