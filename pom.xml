@@ -56,6 +56,7 @@
         <skyscreamer.version>1.5.0</skyscreamer.version>
         <condoid.version>1.21</condoid.version>
         <curl-logger.version>2.1.0</curl-logger.version>
+        <owner.version>1.0.12</owner.version>
     </properties>
 
     <build>
@@ -228,5 +229,11 @@
             <artifactId>curl-logger</artifactId>
             <version>${curl-logger.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.aeonbits.owner</groupId>
+            <artifactId>owner</artifactId>
+            <version>${owner.version}</version>
+        </dependency>
+
     </dependencies>
 </project>

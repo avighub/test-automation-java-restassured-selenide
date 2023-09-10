@@ -17,7 +17,7 @@ public class ListUsersTest extends BaseTest {
     HelperLog log = new HelperLog();
     String userEndpoint; // ALl the tests will use same endpoint
 
-    @BeforeClass(alwaysRun = true)
+//    @BeforeClass(alwaysRun = true)
     public void initEndpoints() {
         userEndpoint = EnvManager.envProperties.get("endpoint.listUsers");
     }

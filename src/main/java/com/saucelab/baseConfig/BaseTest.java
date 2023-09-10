@@ -2,11 +2,13 @@ package com.saucelab.baseConfig;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import com.saucelab.config.EnvironmentConfig;
+import com.saucelab.config.FrameworkConfig;
 import com.saucelab.helper.HelperLog;
 import io.restassured.response.Response;
+import org.aeonbits.owner.ConfigFactory;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
@@ -28,7 +30,7 @@ public class BaseTest {
 
     // Rest Assured and selenium
     public Response response;
-    public String baseUrlUI;
+    public String baseUrl;
     public String baseUrlAPI;
 
     // Utilities and helpers
@@ -45,23 +47,14 @@ public class BaseTest {
     @BeforeSuite(alwaysRun = true)
     public void setupBeforeSuite() {
         // ------- Initializing Config properties ------
-        EnvManager.initConfigProperties();
+        FrameworkConfig frameworkConfig = ConfigFactory.create(FrameworkConfig.class);
+        environment = frameworkConfig.environment();
 
         // ------- START OF LOG INIT -------
         log = Logger.getLogger("");
         PropertyConfigurator.configure("Log4j.properties");
 
-        // Get this value from config.properties file
-        log.setLevel(HelperLog.setLogLevel(EnvManager.configProperties.get("test.loglevel")));
-        log.info("*** BeforeSuite: BaseTestTemplate ***");
-        // ------- END OF LOG INIT -------
 
-        // ------- Setting env  ------
-        EnvManager.setEnvironment();
-
-        // ------- Initializing env properties ------
-        EnvManager.initEnvProperties(environment);
-        log.info("*** Environment properties initialized ***");
     }
 
     @BeforeClass(alwaysRun = true)
@@ -72,12 +65,13 @@ public class BaseTest {
          * - If any test specific request specification is needed
          * create is separately inside Test method
          */
+        FrameworkConfig frameworkConfig = ConfigFactory.create(FrameworkConfig.class);
+        ConfigFactory.setProperty("environment", frameworkConfig.environment());
+        EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class);
 
         // Defining RestAssured configurations
-        baseUrlAPI = EnvManager.envProperties.get("baseUrlAPI");
-        baseUrlUI = EnvManager.envProperties.get("baseUrlUI");
-        log.info("=== baseUriAPI: " + baseUrlAPI);
-        log.info("=== baseUriUI: " + baseUrlUI);
+        baseUrl = environmentConfig.baseUrl();
+        log.info("baseUrl: " + baseUrl);
     }
 
 //    @BeforeMethod(alwaysRun = true)

@@ -17,7 +17,7 @@ public class ConfirmationPage extends BasePage {
     //TODO the back part of the URL is being duplicated and can probably be extracted into
     //a property that keeps track of checkout-step-two.html
     public void visit() {
-        driver.navigate().to(baseUrlUI + "/checkout-step-two.html");
+        driver.navigate().to(baseUrl + "/checkout-step-two.html");
         logger.info("=== Navigated to Check out step two page ===");
     }
 

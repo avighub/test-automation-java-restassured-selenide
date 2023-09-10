@@ -1,6 +1,5 @@
 package PageObjects;
 
-import com.saucelab.baseConfig.EnvManager;
 import com.saucelab.helper.HelperLog;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class LoginPage extends BasePage {
     //Initializing Logger and waits for the page
     HelperLog logger = new HelperLog();
-    int waitTimeMax = Integer.parseInt(EnvManager.configProperties.get("waitMax"));
 
     //Passing driver to super class(BasePageTemplate)
     //Initializing PageObjects
@@ -35,7 +33,7 @@ public class LoginPage extends BasePage {
     WebElement swagLabsLogo;
 
     public LoginPage visit() {
-        driver.get(baseUrlUI);
+        driver.get(baseUrl);
         return this;
     }
 

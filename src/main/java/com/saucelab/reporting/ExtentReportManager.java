@@ -5,7 +5,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.KlovReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.saucelab.baseConfig.BaseTest;
-import com.saucelab.baseConfig.EnvManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -28,9 +27,9 @@ public class ExtentReportManager {
     public ExtentHtmlReporter htmlReporter;
 
     //-------Report info------
-    //Getting below info from config.properties
-    public String ExtentReportOption = EnvManager.configProperties.get("ExtentReportOption");
-    public String projectName = EnvManager.configProperties.get("ApplicationName");
+    //Getting below info from frameworkconfig.properties
+    public String ExtentReportOption;
+    public String projectName = null;
 
     //Creating current timestamp for report name
     public String date = new SimpleDateFormat("dd-MM-yyyy HH-mm-ss").format(new Date());
@@ -41,35 +40,35 @@ public class ExtentReportManager {
     public String reportName = env.get("ReportName");
 
     //==================Setting up KLOV configs===========
-    // ExtentReportOption and KLOVReportLocation value fetched from config.properties
+    // ExtentReportOption and KLOVReportLocation value fetched from frameworkconfig.properties
     public KlovReporter setupKlovReporter() {
 
-        //Checking if AppBuildVersion and reportName is not passed in env variable , will set to default value from config.properties
+        //Checking if AppBuildVersion and reportName is not passed in env variable , will set to default value from frameworkconfig.properties
         if (AppBuildVersion == null) {
-            AppBuildVersion = EnvManager.configProperties.get("AppBuildVersion");
+            AppBuildVersion =null;
         }
         klovReporter = new KlovReporter(projectName, "V" + AppBuildVersion + " - " + date);
 
         // address, host/port of MongoDB
-        if (EnvManager.configProperties.get("KLOVReportLocation").equalsIgnoreCase("remote")) {
-            String KLOVRemoteHost = EnvManager.configProperties.get("KLOVRemoteHost");
-            int KLOVRemoteHostPort = Integer.parseInt(EnvManager.configProperties.get("KLOVRemoteHostPort"));
-            // klov MongoDB Conn
-            klovReporter.initMongoDbConnection(KLOVRemoteHost, KLOVRemoteHostPort);
-
-            // Klov server address
-            klovReporter.initKlovServerConnection(KLOVRemoteHost);
-//            log.info("=== KLOV REPORT HOST: REMOTE === ");
-        } else {
-            int KLOVLocalHostPort = Integer.parseInt(EnvManager.configProperties.get("KLOVLocalHostPort"));
-
-            // klov MongoDB Conn
-            klovReporter.initMongoDbConnection("localhost", KLOVLocalHostPort);
-
-            // Klov server address
-            klovReporter.initKlovServerConnection("http://localhost");
-//            log.info("=== KLOV REPORT HOST: LOCAL === ");
-        }
+//        if () {
+//            String KLOVRemoteHost = null;
+//            int KLOVRemoteHostPort = Integer.parseInt("");
+//            // klov MongoDB Conn
+//            klovReporter.initMongoDbConnection(KLOVRemoteHost, KLOVRemoteHostPort);
+//
+//            // Klov server address
+//            klovReporter.initKlovServerConnection(KLOVRemoteHost);
+////            log.info("=== KLOV REPORT HOST: REMOTE === ");
+//        } else {
+//            int KLOVLocalHostPort = Integer.parseInt("");
+//
+//            // klov MongoDB Conn
+//            klovReporter.initMongoDbConnection("localhost", KLOVLocalHostPort);
+//
+//            // Klov server address
+//            klovReporter.initKlovServerConnection("http://localhost");
+////            log.info("=== KLOV REPORT HOST: LOCAL === ");
+//        }
         return klovReporter;
     }
 
@@ -111,9 +110,9 @@ public class ExtentReportManager {
             htmlReporter.config().setDocumentTitle(projectName);
 
             // Name of the report
-            //Checking if AppBuildVersion is not passed in env variable , will set to default value from config.properties
+            //Checking if AppBuildVersion is not passed in env variable , will set to default value from frameworkconfig.properties
             if (reportName == null) {
-                reportName = EnvManager.configProperties.get("ReportName");
+                reportName = "";
             }
             htmlReporter.config().setReportName("V" + AppBuildVersion + "_" + reportName);
             htmlReporter.config().setTheme(Theme.STANDARD);
@@ -128,9 +127,9 @@ public class ExtentReportManager {
         }
 
         // General information releated to application
-        extentReport.setSystemInfo("Environment", EnvManager.configProperties.get("test.environment"));
-        extentReport.setSystemInfo("Test Layer", EnvManager.configProperties.get("TestLayer"));
-        extentReport.setSystemInfo("Browser", EnvManager.configProperties.get("browser.code"));
+        extentReport.setSystemInfo("Environment", "");
+        extentReport.setSystemInfo("Test Layer", "");
+        extentReport.setSystemInfo("Browser", "");
 
         return extentReport;
     }

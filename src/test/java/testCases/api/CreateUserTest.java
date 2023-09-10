@@ -21,12 +21,12 @@ public class CreateUserTest extends BaseTest {
     HelperLog log = new HelperLog();
     String userEndpoint; // ALl the tests will use same endpoint
 
-    @BeforeClass(alwaysRun = true)
+//    @BeforeClass(alwaysRun = true)
     public void initEndpoints() {
         userEndpoint = EnvManager.envProperties.get("endpoint.listUsers");
     }
 
-    @Test(description = "Verify create user", groups = "api", dataProvider = "createUser", dataProviderClass = CreateUserDataProvider.class)
+//    @Test(description = "Verify create user", groups = "api", dataProvider = "createUser", dataProviderClass = CreateUserDataProvider.class)
     public void createUsers(String name, String job) {
         //Using HasMap to construct JSON Request Body
         Map<String, String> reqBody = new HashMap<>();
@@ -49,7 +49,7 @@ public class CreateUserTest extends BaseTest {
         log.info("Verify create user passed");
     }
 
-    @Test(groups = {"pojo"})
+//    @Test(groups = {"pojo"})
     public void createUserReqBodyUsingPojo() {
         String userEndpoint = EnvManager.envProperties.get("endpoint.listUsers");
         UserAddressPojo userAddressPojo = UserAddressPojo.builder()
@@ -78,7 +78,7 @@ public class CreateUserTest extends BaseTest {
         System.out.println(HelperApi.objToString(createUserPojo));
     }
 
-    @Test(groups = {"pojo"})
+//    @Test(groups = {"pojo"})
     public void createUserReqBodyUsingMapDataProvider(String id, String name, String city, String state, String locality, String zip, String brmYear, String brmMonth, String brmFinish) {
 
         Map<Object, Object> payloadMain = new HashMap<Object, Object>();

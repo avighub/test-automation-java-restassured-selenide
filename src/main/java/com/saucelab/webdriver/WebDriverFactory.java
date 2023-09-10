@@ -2,7 +2,10 @@ package com.saucelab.webdriver;
 
 import com.saucelab.baseConfig.BaseTest;
 import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.config.EnvironmentConfig;
+import com.saucelab.config.FrameworkConfig;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,13 +24,19 @@ public class WebDriverFactory extends BaseTest {
      * @param browserMode
      */
     //TODO : Remove static and make public final for parallelization
-    public static final String BROWSER = EnvManager.configProperties.get("test.browser");
-    public static final String BROWSER_MODE = EnvManager.configProperties.get("test.browserMode");
+
+
+    public static String BROWSER ;
+    public static  String BROWSER_MODE;
     protected WebDriver driver;
 
     public WebDriver getDriver() {
+        FrameworkConfig frameworkConfig = ConfigFactory.create(FrameworkConfig.class);
+        ConfigFactory.setProperty("environment",frameworkConfig.environment());
+        BROWSER = frameworkConfig.browser();
+        BROWSER_MODE = frameworkConfig.browserMode();
 
-        // Based on the values provided in config.properties, webdriver session will be created
+        // Based on the values provided in frameworkconfig.properties, webdriver session will be created
         if (BROWSER.equalsIgnoreCase("chrome")) {
             // To remove the time out error caused due to renderer
             System.setProperty("webdriver.chrome.silentOutput", "true");

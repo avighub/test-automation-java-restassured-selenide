@@ -1,9 +1,11 @@
 package PageObjects;
 
 import com.saucelab.baseConfig.BaseTest;
-import com.saucelab.baseConfig.EnvManager;
+import com.saucelab.config.EnvironmentConfig;
+import com.saucelab.config.FrameworkConfig;
 import com.saucelab.webdriver.UtilSelenium;
 import com.saucelab.webdriver.WebDriverFactory;
+import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -33,7 +35,10 @@ public class BasePage extends BaseTest {
     public BasePage(WebDriver driver) {
         this.driver = driver;
         pageWait = new WebDriverWait(this.driver, 10);
-        baseUrlUI = EnvManager.envProperties.get("baseUrlUI");
+        FrameworkConfig frameworkConfig = ConfigFactory.create(FrameworkConfig.class);
+        ConfigFactory.setProperty("environment", frameworkConfig.environment());
+        EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class);
+        baseUrl = environmentConfig.baseUrl();
     }
 
     @BeforeMethod(alwaysRun = true)

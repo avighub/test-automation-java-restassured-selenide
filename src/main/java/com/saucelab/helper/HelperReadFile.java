@@ -31,18 +31,6 @@ import java.util.stream.Collectors;
 public class HelperReadFile extends BaseTest {
     static Logger log = HelperLog.getLogger();
 
-    public static String readTextFile(String path) {
-        String result = null;
-        try {
-            result = new String(Files.readAllBytes(Paths.get(path)));
-            log.info("Successfully read json file, Path:" + path);
-        } catch (Exception e) {
-            log.warn("Unable to read json file... Path:" + path);
-            e.printStackTrace();
-        }
-        return result;
-    }
-
     /**
      * This method takes properties object and return them with Map
      */
@@ -60,30 +48,9 @@ public class HelperReadFile extends BaseTest {
         return propertiesList;
     }
 
-    /**
-     * This method takes properties file path and return them with Map
-     */
-    public static Map<String, String> readPropertiesFileToMap(String filePath) {
-
-        Map<String, String> propertiesList = new HashMap<>();
-        Properties properties = new Properties();
-        try {
-            FileInputStream file = new FileInputStream(filePath);
-            properties.load(file);
-            propertiesList.putAll(properties.entrySet()
-                    .stream()
-                    .collect(Collectors.toMap(e -> e.getKey().toString(),
-                            e -> e.getValue().toString())));
-            file.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return propertiesList;
-
-    }
 
     /**
-     * Reads the properties file from src/main/resources/config.properties
+     * Reads the properties file from src/main/resources/frameworkconfig.properties
      * And returns Properties object
      */
     public Properties getPropertiesFromConfig() {
@@ -95,7 +62,7 @@ public class HelperReadFile extends BaseTest {
         File file;
         FileInputStream fis;
         try {
-            file = new File("./src/main/resources/config.properties");
+            file = new File("./src/main/resources/frameworkconfig.properties");
             fis = new FileInputStream(URLDecoder.decode(file.getAbsolutePath(), "utf-8"));
             configProperties.load(fis);
         } catch (FileNotFoundException e) {
@@ -110,7 +77,7 @@ public class HelperReadFile extends BaseTest {
     }
 
     /**
-     * Reads the properties file from src/main/resources/config.properties
+     * Reads the properties file from src/main/resources/frameworkconfig.properties
      * And returns Properties object
      */
     public Properties getPropertiesFromEnvConfig(String environment) {
