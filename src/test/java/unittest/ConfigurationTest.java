@@ -3,8 +3,8 @@ package unittest;
 import com.saucelab.config.EnvironmentConfig;
 import com.saucelab.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigFactory;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 
 public class ConfigurationTest {
 
@@ -21,6 +21,6 @@ public class ConfigurationTest {
         ConfigFactory.setProperty("environment", frameworkConfig.environment());
         EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class);
 
-        Assert.assertNotNull(environmentConfig.baseUrl());
+        Assert.assertNotNull(environmentConfig.loginPageUrl());
     }
 }

@@ -10,11 +10,4 @@ public interface FrameworkConfig extends Config {
     @DefaultValue("dev")
     String environment();
 
-    @Key("test.browser")
-    @DefaultValue("firefox")
-    String browser();
-
-    @Key("test.browserMode")
-    @DefaultValue("headless")
-    String browserMode();
 }

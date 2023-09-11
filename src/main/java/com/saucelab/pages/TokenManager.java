@@ -1,0 +1,74 @@
+package com.saucelab.pages;
+
+import com.saucelab.utils.LoggerUtils;
+import org.apache.log4j.Logger;
+
+import java.time.LocalTime;
+
+public class TokenManager  {
+
+    //Initializing Logger and waits for the page
+    static Logger log = LoggerUtils.getLogger();
+
+    /**
+     * Creating constructor and passing WebDriver
+     * The passed WebDriver will be assigned to Class member WebDriver
+     * Same Class member WebDriver can be used throughout the class
+     */
+
+    private LocalTime now = LocalTime.now();
+
+
+
+    /**
+     * Accepts
+     *
+     * @param email
+     * @param password
+     * @return token if success else returns null
+     */
+//    public String getToken(String email, String password) {
+//        log.info("Time Now:" + now);
+//        log.info("Token generation Time:" + 2);
+//        HelperApi helperApi = new HelperApi();
+        /**
+         * Checking if the token is still valid If not then only it will
+         * generate else it will reuse
+         */
+//        if (BaseTest.authToken == null) {
+//            if (BaseTest.tokenGenerationTime == null || BaseTest.tokenGenerationTime.isBefore(now.minusMinutes(30))) {
+//                log.info("Generating New Token");
+//                String tokenEndpoint = "";
+//                RequestSpecification requestSpecification = RestAssured.given().baseUri(tokenEndpoint);
+//                Response resp = requestSpecification
+//                        .formParam("grant_type", "password")
+//                        .formParam("username", email)
+//                        .formParam("password", password)
+//                        .log().uri().log().params()
+//                        .when()
+//                        .post()
+//                        .then()
+//                        .extract().response();
+//                log.info(resp.asString());
+//
+//                if (resp.statusCode() == 200) {
+//                    // Logging time for token generation
+//                    BaseTest.tokenGenerationTime = LocalTime.now();
+//                    BaseTest.authToken = JsonUtils.jsonToObjectByJsonPath(resp.asString(), "access_token").toString();
+//                } else {
+//                    log.info("Failed to generate token. Error: " + resp.jsonPath().get("error"));
+//                    BaseTest.authToken = null;
+//                }
+//
+//            } else {
+//                log.info("Token is still valid, reusing it. TOKEN= " + BaseTest.authToken);
+//            }
+//        } else {
+//            log.info("Custom token from {env}.properties will be used: TOKEN=" + BaseTest.authToken);
+//        }
+//
+//        return BaseTest.authToken;
+//    }
+
+
+}

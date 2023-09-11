@@ -18,11 +18,10 @@
             </run>
         </groups>
         <classes>
-            <class name="testCases.ui.LoginPageTest"/>
-            <class name="testCases.ui.CheckoutPageTest"/>
-            <class name="testCases.api.CreateUserTest"/>
-            <class name="testCases.api.ListUsersTest"/>
-            <class name="testCases.util.ReportingTest"/>
+            <class name="tests.web.LoginPageTest"/>
+            <class name="tests.web.CheckoutPageTest"/>
+            <class name="tests.api.CreateUserTest"/>
+            <class name="tests.api.ListUsersTest"/>
         </classes>
     </test>
 </suite>

@@ -7,7 +7,7 @@ import org.aeonbits.owner.Config;
 })
 public interface EnvironmentConfig extends Config {
 
-    @Key("baseUrl")
-    String baseUrl();
+    @Key("loginPageUrl")
+    String loginPageUrl();
 
 }

@@ -8,54 +8,49 @@
     <description>This framework is meant to automated Web browser actions</description>
 
     <properties>
-        <testSuiteName>SanityTestSuite</testSuiteName>
-
         <!-- Config dependencies -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surefire.version>3.0.0-M5</surefire.version>
-        <maven-compiler.version>3.8.1</maven-compiler.version>
+        <junit.version>5.10.0</junit.version>
 
         <!-- REST API dependencies -->
-        <rest-assured.version>4.4.0</rest-assured.version>
-        <json-schema.version>4.3.0</json-schema.version>
+        <rest-assured.version>5.3.2</rest-assured.version>
+        <json-schema.version>5.3.2</json-schema.version>
         <everit-json-schema>1.5.1</everit-json-schema>
         <json-simple.version>1.1.1</json-simple.version>
-        <gson.version>2.8.6</gson.version>
-        <jayway.jsonpath>2.4.0</jayway.jsonpath>
+        <gson.version>2.10.1</gson.version>
+        <jayway.jsonpath>2.8.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <!--        <selenium.version>4.0.0-alpha-5</selenium.version>-->
-        <selenium.version>4.0.0-beta-3</selenium.version>
-        <testng.version>7.1.0</testng.version>
-        <bonigarcia.version>4.0.0</bonigarcia.version>
+        <selenide.version>6.18.0</selenide.version>
+        <bonigarcia.version>5.5.3</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
-        <commons-compress>1.20</commons-compress>
-        <commons-io>2.7</commons-io>
-        <extentreports-avenstack>3.1.3</extentreports-avenstack>
-        <freemarker.version>2.3.30</freemarker.version>
+        <commons-compress>1.24.0</commons-compress>
+        <commons-io>2.13.0</commons-io>
+        <extentreports-avenstack>5.1.0</extentreports-avenstack>
+        <freemarker.version>2.3.32</freemarker.version>
         <mongodb.version>3.12.2</mongodb.version>
-        <log4j.version>1.2.14</log4j.version>
-        <!--        <logback-testng.version>1.3.1</logback-testng.version>-->
-        <!--        <logback-classic.version>1.2.3</logback-classic.version>-->
-        <allure.testng>2.13.6</allure.testng>
+        <log4j.version>1.2.17</log4j.version>
         <aspectj.version>1.9.6</aspectj.version>
 
         <!-- Utilities dependencies -->
-        <guava.version>24.1.1-jre</guava.version>
+        <guava.version>32.1.2-jre</guava.version>
         <poi.version>4.1.2</poi.version>
-        <poi-ooxml.version>4.1.2</poi-ooxml.version>
-        <poi-ooxml-schema.version>4.1.2</poi-ooxml-schema.version>
-        <opencsv>5.2</opencsv>
+        <poi-ooxml.version>5.2.3</poi-ooxml.version>
+        <poi-ooxml-schema.version>5.2.3</poi-ooxml-schema.version>
+        <opencsv>5.8</opencsv>
         <lombok.version>1.18.20</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
-        <jackson.yaml>2.12.0-rc1</jackson.yaml>
-        <jackson.databind>2.12.0-rc1</jackson.databind>
-        <pdfboxApache.version>2.0.20</pdfboxApache.version>
+        <jackson.yaml>2.15.2</jackson.yaml>
+        <jackson.databind>2.15.2</jackson.databind>
+        <pdfboxApache.version>3.0.0</pdfboxApache.version>
         <jsypt.version>1.9.3</jsypt.version>
         <skyscreamer.version>1.5.0</skyscreamer.version>
-        <condoid.version>1.21</condoid.version>
-        <curl-logger.version>2.1.0</curl-logger.version>
+        <condoid.version>1.22</condoid.version>
+        <curl-logger.version>3.0.0</curl-logger.version>
         <owner.version>1.0.12</owner.version>
     </properties>
 
@@ -66,26 +61,33 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
                 <configuration>
-                    <suiteXmlFiles>
-                        <suiteXmlFile>${testSuiteName}.xml</suiteXmlFile>
-                    </suiteXmlFiles>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <systemPropertyVariables>
+                        <selenide.headless>true</selenide.headless>
+                    </systemPropertyVariables>
                 </configuration>
                 <dependencies>
                 </dependencies>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler.version}</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-compiler-plugin</artifactId>-->
+            <!--                <version>${maven-compiler.version}</version>-->
+            <!--                <configuration>-->
+            <!--                    <source>1.8</source>-->
+            <!--                    <target>1.8</target>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -117,11 +119,6 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
@@ -170,11 +167,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-java</artifactId>
-            <version>${selenium.version}</version>
         </dependency>
         <dependency>
             <groupId>com.jayway.jsonpath</groupId>
@@ -234,6 +226,10 @@
             <artifactId>owner</artifactId>
             <version>${owner.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>${selenide.version}</version>
+        </dependency>
     </dependencies>
 </project>
