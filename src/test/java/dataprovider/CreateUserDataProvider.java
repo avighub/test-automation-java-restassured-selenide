@@ -1,4 +1,4 @@
-package DataProvider;
+package dataprovider;
 
 
 public class CreateUserDataProvider {

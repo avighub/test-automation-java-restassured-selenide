@@ -3,7 +3,7 @@ package unittest;
 import com.saucelab.config.EnvironmentConfig;
 import com.saucelab.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class ConfigurationTest {
@@ -12,7 +12,7 @@ public class ConfigurationTest {
     void testFrameworkConfiguration() {
         FrameworkConfig frameworkConfig = ConfigFactory.create(FrameworkConfig.class);
 
-        Assert.assertNotNull(frameworkConfig.environment());
+        Assertions.assertNotNull(frameworkConfig.environment());
     }
 
     @Test
@@ -21,6 +21,6 @@ public class ConfigurationTest {
         ConfigFactory.setProperty("environment", frameworkConfig.environment());
         EnvironmentConfig environmentConfig = ConfigFactory.create(EnvironmentConfig.class);
 
-        Assert.assertNotNull(environmentConfig.loginPageUrl());
+        Assertions.assertNotNull(environmentConfig.loginPageUrl());
     }
 }

@@ -1,4 +1,4 @@
-package com.saucelab.pages;
+package com.saucelab.utils;
 
 import com.saucelab.utils.LoggerUtils;
 import org.apache.log4j.Logger;

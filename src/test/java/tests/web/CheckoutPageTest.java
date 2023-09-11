@@ -11,9 +11,9 @@ public class CheckoutPageTest extends WebTestSetup {
 
     @Test
     public void ShouldBeAbleToCheckoutWithItems() throws InterruptedException {
-        LoginPage loginPage= new LoginPage();
-        loginPage.visit();
-        loginPage.login("standard_user", "secret_sauce");
+        LoginPage.getInstance()
+                .visit()
+                .login("standard_user", "secret_sauce");
 
         // Navigate directly to checkout step two page
         ConfirmationPage confirmationPage = new ConfirmationPage();

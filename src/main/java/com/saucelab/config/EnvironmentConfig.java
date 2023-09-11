@@ -3,7 +3,7 @@ package com.saucelab.config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:${environment}.properties",
+        "file:src/main/resources/environments/${environment}.properties",
 })
 public interface EnvironmentConfig extends Config {
 

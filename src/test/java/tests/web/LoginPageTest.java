@@ -9,11 +9,9 @@ public class LoginPageTest extends WebTestSetup {
 
     @Test
     public void ShouldBeAbleToLogin() {
-        LoginPage loginPage = new LoginPage();
-        loginPage.visit();
-
-        loginPage.login("standard_user", "secret_sauce");
+        LoginPage.getInstance()
+                .visit()
+                .login("standard_user", "secret_sauce");
     }
-
 
 }
