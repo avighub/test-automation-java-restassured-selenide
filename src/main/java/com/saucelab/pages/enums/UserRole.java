@@ -1,4 +1,4 @@
-package com.saucelab.pages;
+package com.saucelab.pages.enums;
 
 public enum UserRole {
     STANDARD_USER,

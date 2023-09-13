@@ -1,11 +1,15 @@
 package com.saucelab.pages;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selectors;
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 import com.saucelab.config.ConfigurationFactory;
 import com.saucelab.config.EnvironmentConfig;
+import com.saucelab.pages.enums.UserRole;
+import com.saucelab.utils.BrowserUtils;
+import org.openqa.selenium.support.Color;
+
+import static com.codeborne.selenide.Selectors.byCssSelector;
+import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selenide.$;
 
 
 public class LoginPage {
@@ -14,10 +18,11 @@ public class LoginPage {
     }
 
     private static final EnvironmentConfig ENV_CONFIG = ConfigurationFactory.getEnvironmentConfig();
-    private static final SelenideElement USERNAME_FILED = Selenide.$(Selectors.byCssSelector("#user-name"));
-    private static final SelenideElement PASSWORD_FILED = Selenide.$(Selectors.byCssSelector("#password"));
-    private static final SelenideElement LOGIN_BUTTON = Selenide.$(Selectors.byCssSelector("#login-button"));
-    private static final SelenideElement SWAGLAB_LOGO = Selenide.$(Selectors.byXpath("//div[@class='login_logo']"));
+    private static final SelenideElement USERNAME_FILED = $(byCssSelector("#user-name"));
+    private static final SelenideElement PASSWORD_FILED = $(byCssSelector("#password"));
+    private static final SelenideElement LOGIN_BUTTON = $(byXpath("//input[@value='Login']"));
+    private static final String LOGIN_BUTTON_COLOR_IN_HEX = "#3ddc91";
+    private static final SelenideElement SWAGLAB_LOGO = $(byXpath("//div[@class='login_logo']"));
 
     public static LoginPage getInstance() {
         return new LoginPage();
@@ -27,6 +32,17 @@ public class LoginPage {
         Selenide.open(ENV_CONFIG.loginPageUrl());
         SWAGLAB_LOGO.shouldBe(Condition.visible);
         return this;
+    }
+
+    public LoginPage checkLoginButtonColor() {
+        String loginButtonColorAsRgba = Color.fromString(LOGIN_BUTTON_COLOR_IN_HEX).asRgba();
+        LOGIN_BUTTON.getCssValue("background-color").equals(loginButtonColorAsRgba);
+        return this;
+    }
+
+    public InventoryPage loginUsingCookies() {
+        BrowserUtils.setCookie("session-username", "standard_user", "/");
+        return InventoryPage.getInstance();
     }
 
     private void enterCredentialsAndClickLogin(String username, String password) {
@@ -59,7 +75,6 @@ public class LoginPage {
                 break;
             case PERFORMANCE_GLITCH_USER:
                 enterCredentialsAndClickLogin(performanceGlitchUser, password);
-
                 break;
         }
 

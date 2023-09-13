@@ -10,4 +10,7 @@ public interface EnvironmentConfig extends Config {
     @Key("loginPageUrl")
     String loginPageUrl();
 
+    @Key("inventoryPageUrl")
+    String inventoryPageUrl();
+
 }

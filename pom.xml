@@ -52,6 +52,7 @@
         <condoid.version>1.22</condoid.version>
         <curl-logger.version>3.0.0</curl-logger.version>
         <owner.version>1.0.12</owner.version>
+        <slf4j.version>2.0.6</slf4j.version>
     </properties>
 
     <build>
@@ -230,6 +231,12 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
