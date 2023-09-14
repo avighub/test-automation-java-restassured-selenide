@@ -12,7 +12,7 @@ public class CheckoutPageTest extends WebTestSetup {
     @Test
     public void ShouldBeAbleToCheckoutWithItems() throws InterruptedException {
         LoginPage.getInstance()
-                .visit()
+                .open()
                 .login("standard_user", "secret_sauce");
 
         // Navigate directly to checkout step two page
