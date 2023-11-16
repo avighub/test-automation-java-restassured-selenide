@@ -1,11 +1,13 @@
 package unittest;
 
+import annotations.UnitTest;
 import com.saucelab.config.EnvironmentConfig;
 import com.saucelab.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+@UnitTest
 public class ConfigurationTest {
 
     @Test

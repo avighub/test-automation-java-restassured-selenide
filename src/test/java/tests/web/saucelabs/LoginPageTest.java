@@ -1,4 +1,4 @@
-package tests.web;
+package tests.web.saucelabs;
 
 import annotations.SmokeTest;
 import annotations.feature.LoginTest;

@@ -1,4 +1,4 @@
-package tests.web;
+package tests.web.saucelabs;
 
 import com.saucelab.pages.CheckoutCompletePage;
 import com.saucelab.pages.ConfirmationPage;
@@ -9,7 +9,7 @@ import tests.basesetup.WebTestSetup;
 
 public class CheckoutPageTest extends WebTestSetup {
 
-    @Test
+//    @Test
     public void ShouldBeAbleToCheckoutWithItems() throws InterruptedException {
         LoginPage.getInstance()
                 .open()

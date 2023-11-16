@@ -13,4 +13,7 @@ public interface EnvironmentConfig extends Config {
     @Key("inventoryPageUrl")
     String inventoryPageUrl();
 
+    @Key("cartPageUrl")
+    String cartPageUrl();
+
 }

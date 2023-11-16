@@ -10,10 +10,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@ExtendWith({TextReportExtension.class})
-@Tag("flaky")
+@Tag("unit")
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD,ElementType.TYPE})
 @Test
-public @interface FlakyTest {
+public @interface UnitTest {
 }
