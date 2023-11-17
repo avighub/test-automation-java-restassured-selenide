@@ -1,4 +1,4 @@
-package unittest.utils;
+package unittest;
 
 import annotations.UnitTest;
 import com.saucelab.config.EnvironmentConfig;
