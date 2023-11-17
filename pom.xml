@@ -5,7 +5,7 @@
     <artifactId>test-automation-framework-api-web</artifactId>
     <version>0.3.0</version>
     <name>Java Test Automation Framework</name>
-    <description>This framework is meant to automated Web browser actions</description>
+    <description>This framework is designed to automate api and web tests</description>
 
     <properties>
         <!-- Config dependencies -->
@@ -70,15 +70,6 @@
                 <dependencies>
                 </dependencies>
             </plugin>
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-compiler-plugin</artifactId>-->
-            <!--                <version>${maven-compiler.version}</version>-->
-            <!--                <configuration>-->
-            <!--                    <source>1.8</source>-->
-            <!--                    <target>1.8</target>-->
-            <!--                </configuration>-->
-            <!--            </plugin>-->
         </plugins>
     </build>
 

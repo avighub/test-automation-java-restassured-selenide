@@ -1,12 +1,11 @@
-package tests.web.saucelabs;
+package tests.web.saucedemo;
 
 import annotations.feature.CartTest;
-import annotations.feature.InventoryTest;
 import com.saucelab.pages.InventoryPage;
 import com.saucelab.pages.LoginPage;
 import com.saucelab.pages.enums.UserRole;
 import org.junit.jupiter.api.Test;
-import tests.basesetup.WebTestSetup;
+import tests.basetest.WebTestSetup;
 
 @CartTest
 public class CartPageTest extends WebTestSetup {

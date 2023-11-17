@@ -1,4 +1,4 @@
-package tests.basesetup;
+package tests.basetest;
 
 import com.codeborne.selenide.Configuration;
 import com.saucelab.config.ConfigurationFactory;

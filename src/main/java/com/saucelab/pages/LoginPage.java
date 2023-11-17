@@ -24,7 +24,7 @@ public class LoginPage {
     private static final SelenideElement LOGIN_BUTTON = $(byXpath("//input[@value='Login']"));
     private static final String LOGIN_BUTTON_COLOR_IN_HEX = "#3ddc91";
     private static final SelenideElement ERROR_MESSAGE_CONTAINER = $(byXpath("//div[@class='error-message-container error']"));
-    private static final String ERROR_MESSAGE_CONTAINER_COLOR_IN_HEX = "#e2231a";
+
     private static final SelenideElement ERROR_MESSAGE = $(byXpath("//h3[@data-test='error']"));
     private static final String ERROR_MESSAGE_TEXT = "Epic sadface: You can only access '/inventory.html' when you are logged in.";
 
@@ -51,7 +51,8 @@ public class LoginPage {
     }
 
     public LoginPage checkForValidationErrorMessageAndElementsColor() {
-        String containerBoxColorAsRgba = Color.fromString(ERROR_MESSAGE_CONTAINER_COLOR_IN_HEX).asRgba();
+        String errorMessageContainerColorInHex = "#e2231a";
+        String containerBoxColorAsRgba = Color.fromString(errorMessageContainerColorInHex).asRgba();
         ERROR_MESSAGE_CONTAINER.shouldBe(visible).getCssValue("background-color").equals(containerBoxColorAsRgba);
         ERROR_MESSAGE.shouldBe(visible).getText().equals(ERROR_MESSAGE_TEXT);
         return this;
