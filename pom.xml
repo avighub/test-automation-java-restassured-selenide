@@ -30,7 +30,7 @@
         <bonigarcia.version>4.0.0</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
-        <commons-compress>1.20</commons-compress>
+        <commons-compress>1.25.0</commons-compress>
         <commons-io>2.7</commons-io>
         <extentreports-avenstack>3.1.5</extentreports-avenstack>
         <freemarker.version>2.3.30</freemarker.version>
