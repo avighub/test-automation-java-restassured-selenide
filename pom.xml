@@ -47,7 +47,7 @@
         <poi-ooxml.version>4.1.2</poi-ooxml.version>
         <poi-ooxml-schema.version>4.1.2</poi-ooxml-schema.version>
         <opencsv>5.2</opencsv>
-        <lombok.version>1.18.20</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <jackson.yaml>2.12.0-rc1</jackson.yaml>
         <jackson.databind>2.12.0-rc1</jackson.databind>
