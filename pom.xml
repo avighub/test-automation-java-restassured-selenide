@@ -224,7 +224,7 @@
         <dependency>
             <groupId>com.codoid.products</groupId>
             <artifactId>fillo</artifactId>
-            <version>1.21</version>
+            <version>1.22</version>
         </dependency>
         <dependency>
             <groupId>com.github.dzieciou.testing</groupId>
