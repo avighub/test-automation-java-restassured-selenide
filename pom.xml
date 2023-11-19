@@ -42,7 +42,7 @@
         <aspectj.version>1.9.6</aspectj.version>
 
         <!-- Utilities dependencies -->
-        <guava.version>24.1.1-jre</guava.version>
+        <guava.version>32.1.3-jre</guava.version>
         <poi.version>4.1.2</poi.version>
         <poi-ooxml.version>5.2.4</poi-ooxml.version>
         <poi-ooxml-schema.version>4.1.2</poi-ooxml-schema.version>
