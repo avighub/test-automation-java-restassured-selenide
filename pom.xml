@@ -44,7 +44,7 @@
         <!-- Utilities dependencies -->
         <guava.version>24.1.1-jre</guava.version>
         <poi.version>4.1.2</poi.version>
-        <poi-ooxml.version>4.1.2</poi-ooxml.version>
+        <poi-ooxml.version>5.2.4</poi-ooxml.version>
         <poi-ooxml-schema.version>4.1.2</poi-ooxml-schema.version>
         <opencsv>5.2</opencsv>
         <lombok.version>1.18.20</lombok.version>
