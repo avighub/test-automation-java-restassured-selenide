@@ -31,7 +31,7 @@
 
         <!-- Reporting and Logs dependencies -->
         <commons-compress>1.20</commons-compress>
-        <commons-io>2.7</commons-io>
+        <commons-io>2.15.0</commons-io>
         <extentreports-avenstack>3.1.5</extentreports-avenstack>
         <freemarker.version>2.3.30</freemarker.version>
         <mongodb.version>3.12.2</mongodb.version>
