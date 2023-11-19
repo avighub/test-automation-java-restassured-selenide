@@ -12,8 +12,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <surefire.version>3.0.0-M5</surefire.version>
-        <junit.version>5.10.0</junit.version>
+        <surefire.version>3.2.2</surefire.version>
+        <junit.version>5.10.1</junit.version>
 
         <!-- REST API dependencies -->
         <rest-assured.version>5.3.2</rest-assured.version>
@@ -24,35 +24,35 @@
         <jayway.jsonpath>2.8.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>6.18.0</selenide.version>
-        <bonigarcia.version>5.5.3</bonigarcia.version>
+        <selenide.version>7.0.2</selenide.version>
+        <bonigarcia.version>5.6.2</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
-        <commons-compress>1.24.0</commons-compress>
-        <commons-io>2.13.0</commons-io>
-        <extentreports-avenstack>5.1.0</extentreports-avenstack>
+        <commons-compress>1.25.0</commons-compress>
+        <commons-io>2.15.0</commons-io>
+        <extentreports-avenstack>5.1.1</extentreports-avenstack>
         <freemarker.version>2.3.32</freemarker.version>
-        <mongodb.version>3.12.2</mongodb.version>
+        <mongodb.version>3.12.14</mongodb.version>
         <log4j.version>1.2.17</log4j.version>
         <aspectj.version>1.9.6</aspectj.version>
 
         <!-- Utilities dependencies -->
-        <guava.version>32.1.2-jre</guava.version>
+        <guava.version>32.1.3-jre</guava.version>
         <poi.version>4.1.2</poi.version>
-        <poi-ooxml.version>5.2.3</poi-ooxml.version>
+        <poi-ooxml.version>5.2.4</poi-ooxml.version>
         <poi-ooxml-schema.version>5.2.3</poi-ooxml-schema.version>
         <opencsv>5.8</opencsv>
-        <lombok.version>1.18.20</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
-        <jackson.yaml>2.15.2</jackson.yaml>
-        <jackson.databind>2.15.2</jackson.databind>
+        <jackson.yaml>2.16.0</jackson.yaml>
+        <jackson.databind>2.16.0</jackson.databind>
         <pdfboxApache.version>3.0.0</pdfboxApache.version>
         <jsypt.version>1.9.3</jsypt.version>
-        <skyscreamer.version>1.5.0</skyscreamer.version>
+        <skyscreamer.version>1.5.1</skyscreamer.version>
         <condoid.version>1.22</condoid.version>
         <curl-logger.version>3.0.0</curl-logger.version>
         <owner.version>1.0.12</owner.version>
-        <slf4j.version>2.0.6</slf4j.version>
+        <slf4j.version>2.0.9</slf4j.version>
     </properties>
 
     <build>
