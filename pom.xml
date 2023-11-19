@@ -50,7 +50,7 @@
         <lombok.version>1.18.20</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <jackson.yaml>2.12.0-rc1</jackson.yaml>
-        <jackson.databind>2.12.0-rc1</jackson.databind>
+        <jackson.databind>2.16.0</jackson.databind>
         <pdfboxApache.version>2.0.20</pdfboxApache.version>
     </properties>
 
