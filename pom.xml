@@ -26,7 +26,7 @@
         <!-- Selenium dependencies -->
         <!--        <selenium.version>4.0.0-alpha-5</selenium.version>-->
         <selenium.version>4.0.0-beta-3</selenium.version>
-        <testng.version>7.1.0</testng.version>
+        <testng.version>7.8.0</testng.version>
         <bonigarcia.version>4.0.0</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
