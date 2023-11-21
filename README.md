@@ -1,4 +1,4 @@
-### WebWolf - A WEB UI Test Automation Framework
+### WEB UI Test Automation Framework
 
 #### Tech Stack
 
@@ -7,11 +7,8 @@
 | Programming Language                      | <a href="https://www.oracle.com/in/java/technologies/javase/jdk11-archive-downloads.html">Java</a> |
 | Build and Library management              | <a href="https://maven.apache.org/">Maven</a>                                                      |
 | WEB automation Library                    | Selenium     , Selenide                                                                            |
-| HTTP Library                              | Rest Assured                                                                                       |
 | Assertion Library                         | AssertJ                                                                                            |
 | Test runner  Library                      | TestNG                                                                                             |
-| Reporting  Library                        | Extent Report                                                                                      |
-| Logging  Library                          | Log4J                                                                                              |
 | CI/CD                                     | Jenkins, Github Actions                                                                            |
 | Optimize boilerplate code                 | Lombok                                                                                             |
 | Async library                             | Awaitility                                                                                         |
