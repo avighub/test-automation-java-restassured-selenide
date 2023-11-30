@@ -29,7 +29,7 @@
 
         <!-- Reporting and Logs dependencies -->
         <commons-compress>1.25.0</commons-compress>
-        <commons-io>2.15.0</commons-io>
+        <commons-io>2.15.1</commons-io>
         <extentreports-avenstack>5.1.1</extentreports-avenstack>
         <freemarker.version>2.3.32</freemarker.version>
         <mongodb.version>3.12.14</mongodb.version>
