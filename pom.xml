@@ -16,15 +16,15 @@
         <junit.version>5.10.1</junit.version>
 
         <!-- REST API dependencies -->
-        <rest-assured.version>5.3.2</rest-assured.version>
-        <json-schema.version>5.3.2</json-schema.version>
+        <rest-assured.version>5.4.0</rest-assured.version>
+        <json-schema.version>5.4.0</json-schema.version>
         <everit-json-schema>1.5.1</everit-json-schema>
         <json-simple.version>1.1.1</json-simple.version>
         <gson.version>2.10.1</gson.version>
         <jayway.jsonpath>2.8.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>7.0.3</selenide.version>
+        <selenide.version>7.0.4</selenide.version>
         <bonigarcia.version>5.6.2</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
@@ -46,7 +46,7 @@
         <javafaker.version>1.0.2</javafaker.version>
         <jackson.yaml>2.16.0</jackson.yaml>
         <jackson.databind>2.16.0</jackson.databind>
-        <pdfboxApache.version>3.0.0</pdfboxApache.version>
+        <pdfboxApache.version>3.0.1</pdfboxApache.version>
         <jsypt.version>1.9.3</jsypt.version>
         <skyscreamer.version>1.5.1</skyscreamer.version>
         <condoid.version>1.22</condoid.version>
