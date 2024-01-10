@@ -18,8 +18,8 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.web.saucedemo.LoginPageTest"/>
-            <class name="tests.web.saucedemo.CheckoutPageTest"/>
+            <class name="tests.web.reactapp.LoginPageTest"/>
+            <class name="tests.web.reactapp.CheckoutPageTest"/>
             <class name="tests.api.CreateUserTest"/>
             <class name="tests.api.ListUsersTest"/>
         </classes>

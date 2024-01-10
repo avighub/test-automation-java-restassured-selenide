@@ -4,7 +4,7 @@ import com.codeborne.selenide.*;
 import com.saucelab.config.ConfigurationFactory;
 import com.saucelab.config.EnvironmentConfig;
 import com.saucelab.pages.enums.UserRole;
-import com.saucelab.utils.BrowserUtils;
+import com.saucelab.utils.Browser;
 import org.openqa.selenium.support.Color;
 
 import static com.codeborne.selenide.Condition.visible;
@@ -59,7 +59,7 @@ public class LoginPage {
     }
 
     public InventoryPage loginUsingCookies() {
-        BrowserUtils.setCookie("session-username", "standard_user", "/");
+        Browser.setCookie("session-username", "standard_user", "/");
         return InventoryPage.getInstance();
     }
 
