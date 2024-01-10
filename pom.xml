@@ -12,7 +12,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <surefire.version>3.2.3</surefire.version>
+        <surefire.version>3.2.5</surefire.version>
         <junit.version>5.10.1</junit.version>
 
         <!-- REST API dependencies -->
@@ -25,7 +25,7 @@
 
         <!-- Selenium dependencies -->
         <selenide.version>7.0.4</selenide.version>
-        <bonigarcia.version>5.6.2</bonigarcia.version>
+        <bonigarcia.version>5.6.3</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
         <commons-compress>1.25.0</commons-compress>
@@ -44,15 +44,15 @@
         <opencsv>5.9</opencsv>
         <lombok.version>1.18.30</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
-        <jackson.yaml>2.16.0</jackson.yaml>
-        <jackson.databind>2.16.0</jackson.databind>
+        <jackson.yaml>2.16.1</jackson.yaml>
+        <jackson.databind>2.16.1</jackson.databind>
         <pdfboxApache.version>3.0.1</pdfboxApache.version>
         <jsypt.version>1.9.3</jsypt.version>
         <skyscreamer.version>1.5.1</skyscreamer.version>
         <condoid.version>1.22</condoid.version>
         <curl-logger.version>3.0.0</curl-logger.version>
         <owner.version>1.0.12</owner.version>
-        <slf4j.version>2.0.9</slf4j.version>
+        <slf4j.version>2.0.11</slf4j.version>
     </properties>
 
     <build>
