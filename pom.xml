@@ -2,9 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.techiewolf.test</groupId>
-    <artifactId>test-automation-framework-api-web</artifactId>
+    <artifactId>test-automation-java-restassured-selenium</artifactId>
     <version>0.3.0</version>
-    <name>Java Test Automation Framework</name>
+    <name>Test Automation Java RestAssured Selenide</name>
     <description>This framework is designed to automate api and web tests</description>
 
     <properties>
