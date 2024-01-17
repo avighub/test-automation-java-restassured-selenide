@@ -1,4 +1,4 @@
-package annotations.feature;
+package tech.techiewolf.annotations.feature;
 
 import com.codeborne.selenide.junit5.TextReportExtension;
 import org.junit.jupiter.api.Tag;
