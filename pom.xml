@@ -8,14 +8,16 @@
     <description>This framework is designed to automate api and web tests</description>
 
     <properties>
-        <!-- Config dependencies -->
+        <!-- Configuration dependencies -->
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <surefire.version>3.2.5</surefire.version>
+
+        <!-- Test and data management dependencies-->
         <junit.version>5.10.1</junit.version>
 
-        <!-- REST API dependencies -->
+        <!-- HTTP and JSON dependencies -->
         <rest-assured.version>5.4.0</rest-assured.version>
         <json-schema.version>5.4.0</json-schema.version>
         <everit-json-schema>1.5.1</everit-json-schema>
