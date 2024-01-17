@@ -1,4 +1,4 @@
-package annotations.feature;
+package tech.techiewolf.annotations;
 
 import com.codeborne.selenide.junit5.TextReportExtension;
 import org.junit.jupiter.api.Tag;
@@ -11,9 +11,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @ExtendWith({TextReportExtension.class})
-@Tag("cart")
+@Tag("smoke")
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.METHOD, ElementType.TYPE})
+@Target({ElementType.TYPE, ElementType.METHOD})
 @Test
-public @interface CartTest {
+public @interface SmokeTest {
 }

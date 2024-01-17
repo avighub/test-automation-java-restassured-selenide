@@ -1,8 +1,8 @@
-package unittest;
+package tech.techiewolf.unittest;
 
-import annotations.UnitTest;
-import com.saucelab.config.EnvironmentConfig;
-import com.saucelab.config.FrameworkConfig;
+import tech.techiewolf.annotations.UnitTest;
+import tech.techiewolf.config.EnvironmentConfig;
+import tech.techiewolf.config.FrameworkConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

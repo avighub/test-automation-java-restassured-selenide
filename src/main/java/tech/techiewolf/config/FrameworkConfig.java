@@ -1,4 +1,4 @@
-package com.saucelab.config;
+package tech.techiewolf.config;
 
 import org.aeonbits.owner.Config;
 

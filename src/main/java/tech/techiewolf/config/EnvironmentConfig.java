@@ -1,4 +1,4 @@
-package com.saucelab.config;
+package tech.techiewolf.config;
 
 import org.aeonbits.owner.Config;
 
@@ -10,10 +10,10 @@ public interface EnvironmentConfig extends Config {
     @Key("loginPageUrl")
     String loginPageUrl();
 
-    @Key("inventoryPageUrl")
-    String inventoryPageUrl();
+    @Key("username")
+    String username();
 
-    @Key("cartPageUrl")
-    String cartPageUrl();
+    @Key("password")
+    String password();
 
 }

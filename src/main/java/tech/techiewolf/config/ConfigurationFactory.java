@@ -1,4 +1,4 @@
-package com.saucelab.config;
+package tech.techiewolf.config;
 
 import org.aeonbits.owner.ConfigCache;
 import org.aeonbits.owner.ConfigFactory;

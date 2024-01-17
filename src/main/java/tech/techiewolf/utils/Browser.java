@@ -1,4 +1,4 @@
-package com.saucelab.utils;
+package tech.techiewolf.utils;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;

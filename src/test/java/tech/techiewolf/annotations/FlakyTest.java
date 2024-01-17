@@ -1,4 +1,4 @@
-package annotations;
+package tech.techiewolf.annotations;
 
 import com.codeborne.selenide.junit5.TextReportExtension;
 import org.junit.jupiter.api.Tag;
@@ -11,9 +11,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @ExtendWith({TextReportExtension.class})
-@Tag("smoke")
+@Tag("flaky")
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE, ElementType.METHOD})
+@Target({ElementType.METHOD,ElementType.TYPE})
 @Test
-public @interface SmokeTest {
+public @interface FlakyTest {
 }
