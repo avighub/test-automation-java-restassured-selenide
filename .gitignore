@@ -71,4 +71,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# credentials
+git-crypt-secret
+
 # End of https://www.gitignore.io/api/java,windows,eclipse
