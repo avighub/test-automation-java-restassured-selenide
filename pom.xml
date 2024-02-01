@@ -26,7 +26,7 @@
         <jayway.jsonpath>2.9.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>7.0.4</selenide.version>
+        <selenide.version>7.0.6</selenide.version>
         <bonigarcia.version>5.6.3</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
