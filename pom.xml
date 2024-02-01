@@ -23,7 +23,7 @@
         <everit-json-schema>1.5.1</everit-json-schema>
         <json-simple.version>1.1.1</json-simple.version>
         <gson.version>2.10.1</gson.version>
-        <jayway.jsonpath>2.8.0</jayway.jsonpath>
+        <jayway.jsonpath>2.9.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
         <selenide.version>7.0.4</selenide.version>
