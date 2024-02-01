@@ -71,6 +71,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # credentials
-git-crypt-secret
+git-crypt-secret-public
 
 # End of https://www.gitignore.io/api/java,windows,eclipse
