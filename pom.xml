@@ -15,7 +15,7 @@
         <surefire.version>3.2.5</surefire.version>
 
         <!-- Test and data management dependencies-->
-        <junit.version>5.10.1</junit.version>
+        <junit.version>5.10.2</junit.version>
 
         <!-- HTTP and JSON dependencies -->
         <rest-assured.version>5.4.0</rest-assured.version>
@@ -26,7 +26,7 @@
         <jayway.jsonpath>2.9.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>7.0.6</selenide.version>
+        <selenide.version>7.1.0</selenide.version>
         <bonigarcia.version>5.6.3</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
@@ -54,7 +54,7 @@
         <condoid.version>1.22</condoid.version>
         <curl-logger.version>3.0.0</curl-logger.version>
         <owner.version>1.0.12</owner.version>
-        <slf4j.version>2.0.11</slf4j.version>
+        <slf4j.version>2.0.12</slf4j.version>
     </properties>
 
     <build>
