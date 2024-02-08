@@ -1,4 +1,12 @@
 ### WEB UI Test Automation Framework
+[![stars - test-automation-java-restassured-selenide](https://img.shields.io/github/stars/avighub/test-automation-java-restassured-selenide?style=social)](https://github.com/avighub/test-automation-java-restassured-selenide)
+[![forks - test-automation-java-restassured-selenide](https://img.shields.io/github/forks/avighub/test-automation-java-restassured-selenide?style=social)](https://github.com/avighub/test-automation-java-restassured-selenide)
+[![License](https://img.shields.io/badge/License-MIT-blue)](#license)
+[![issues - test-automation-java-restassured-selenide](https://img.shields.io/github/issues/avighub/test-automation-java-restassured-selenide)](https://github.com/avighub/test-automation-java-restassured-selenide/issues)  
+[![View site - GH Pages](https://img.shields.io/badge/View_site-GH_Pages-2ea44f?style=for-the-badge)](https://avighub.github.io/test-automation-java-restassured-selenide/)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/avighub/test-automation-java-restassured-selenide/run-tests-on-pr-or-push.yml)
+
+
 
 #### Tech Stack
 
@@ -69,3 +77,9 @@
 - Inspired and Thankful to amazing friends/colleagues/mentors
     - Testing Mini Bytes [Youtube channel](https://www.youtube.com/@TestingMiniBytes) ( Amuthan Saktivel )
     - Power Tester [Youtube channel](https://www.youtube.com/@powertester5596) ( Pramod Yadav )
+ 
+
+
+
+
+
