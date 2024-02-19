@@ -27,10 +27,10 @@
 
         <!-- Selenium dependencies -->
         <selenide.version>7.1.0</selenide.version>
-        <bonigarcia.version>5.6.3</bonigarcia.version>
+        <bonigarcia.version>5.6.4</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
-        <commons-compress>1.25.0</commons-compress>
+        <commons-compress>1.26.0</commons-compress>
         <commons-io>2.15.1</commons-io>
         <extentreports-avenstack>5.1.1</extentreports-avenstack>
         <freemarker.version>2.3.32</freemarker.version>
