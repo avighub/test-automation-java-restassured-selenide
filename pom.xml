@@ -26,11 +26,11 @@
         <jayway.jsonpath>2.9.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>7.2.0</selenide.version>
+        <selenide.version>7.2.1</selenide.version>
         <bonigarcia.version>5.7.0</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
-        <commons-compress>1.26.0</commons-compress>
+        <commons-compress>1.26.1</commons-compress>
         <commons-io>2.15.1</commons-io>
         <extentreports-avenstack>5.1.1</extentreports-avenstack>
         <freemarker.version>2.3.32</freemarker.version>
@@ -39,16 +39,16 @@
         <aspectj.version>1.9.6</aspectj.version>
 
         <!-- Utilities dependencies -->
-        <guava.version>33.0.0-jre</guava.version>
+        <guava.version>33.1.0-jre</guava.version>
         <poi.version>4.1.2</poi.version>
         <poi-ooxml.version>5.2.5</poi-ooxml.version>
         <poi-ooxml-schema.version>5.2.3</poi-ooxml-schema.version>
         <opencsv>5.9</opencsv>
         <lombok.version>1.18.30</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
-        <jackson.yaml>2.16.1</jackson.yaml>
-        <jackson.databind>2.16.1</jackson.databind>
-        <pdfboxApache.version>3.0.1</pdfboxApache.version>
+        <jackson.yaml>2.17.0</jackson.yaml>
+        <jackson.databind>2.17.0</jackson.databind>
+        <pdfboxApache.version>3.0.2</pdfboxApache.version>
         <jsypt.version>1.9.3</jsypt.version>
         <skyscreamer.version>1.5.1</skyscreamer.version>
         <condoid.version>1.22</condoid.version>
