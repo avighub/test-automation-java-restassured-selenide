@@ -26,7 +26,7 @@
         <jayway.jsonpath>2.9.0</jayway.jsonpath>
 
         <!-- Selenium dependencies -->
-        <selenide.version>7.2.1</selenide.version>
+        <selenide.version>7.2.2</selenide.version>
         <bonigarcia.version>5.7.0</bonigarcia.version>
 
         <!-- Reporting and Logs dependencies -->
@@ -44,7 +44,7 @@
         <poi-ooxml.version>5.2.5</poi-ooxml.version>
         <poi-ooxml-schema.version>5.2.3</poi-ooxml-schema.version>
         <opencsv>5.9</opencsv>
-        <lombok.version>1.18.30</lombok.version>
+        <lombok.version>1.18.32</lombok.version>
         <javafaker.version>1.0.2</javafaker.version>
         <jackson.yaml>2.17.0</jackson.yaml>
         <jackson.databind>2.17.0</jackson.databind>
